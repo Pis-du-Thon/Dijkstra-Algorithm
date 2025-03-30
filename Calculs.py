@@ -71,11 +71,6 @@ class Calculs(object):
         plt.xlabel('Classement')
         plt.savefig('mafig.pdf')
 
-    def normaliser(self, val):
-        scaler = MinMaxScaler()
-        res = scaler.fit_transform(val)
-        return res
-    
     def tri(self, col = {}):
         temp = sorted(col.values())
         for i in range(1, len(col) + 1):
@@ -83,3 +78,8 @@ class Calculs(object):
         for j in range(1, len(temp) + 1):
             col[j] = temp[j - 1]
         return col
+
+    def normaliser(self, val):
+        scaler = MinMaxScaler()
+        res = scaler.fit_transform(val)
+        return res
