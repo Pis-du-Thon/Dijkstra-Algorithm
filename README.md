@@ -1,1 +1,1 @@
-# UI for KNN and KMeans
+# CLI for KNN and KMeans
